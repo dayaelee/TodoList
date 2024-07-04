@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>오늘 할 일</title>
+        <script>
+            function showValue() {
+                var inputValue = document.getElementById('inputData').value;
+
+                // 새로운 리스트 아이템 생성  
+                var listItem = document.createElement('li'); // li를 만들고 이를 참조하는 리스트 생성
+                listItem.textContent = inputValue // 해당 컨텐츠의 textContent는 inputValue값을 가진다.
+                
+                var checkbox = document.createElement('input');
+                checkbox.type = "checkbox";
+
+                var label = document.createElement('label');
+                label.textContent = inputValue;
+
+                listItem.appendChild(checkbox)
+
+                // 리스트에 추가 
+                var list = document.getElementById('todoList');
+                list.appendChild(listItem);
+
+                // 입력 필드를 비움 
+                document.getElementById('inputData').value = '';
+
+            }
+        </script>
+    </head>
+   
+    <body>
+        <h1> 
+            오늘 할 일 
+        </h1>
+        <input type="text" id = "inputData"></input>
+        <button type="button" onclick="showValue()">추가</button>
+        <ol id="todoList">
+
+        </ol>
+    </body>
+</html>
