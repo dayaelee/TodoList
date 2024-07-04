@@ -5,7 +5,7 @@
         <title>오늘 할 일</title>
         <script>
             window.onload = function() {
-                // // 페이지 로드시 localStorage에서 값을 가져와서 출력 
+                // 페이지 로드시 localStorage에서 값을 가져와서 출력 
                 try {
                     var todo = JSON.parse(localStorage.getItem('todo')) || [];
                     displayArray(todo);
@@ -20,9 +20,11 @@
             function showValue() {
                 var inputValue = document.getElementById('inputData').value;
                 console.log('inputValue:', inputValue);
+                
                 // 로컬스토리지에서 'todo' 키로 저장된 배열 가져오기 
                 var storedArray = JSON.parse(window.localStorage.getItem('todo')) || [];
                 console.log('storedArray:', storedArray);
+                
                 // 입력값을 배열에 추가함
                 storedArray.push(inputValue)
 
@@ -33,7 +35,6 @@
                 document.getElementById('inputData').value = '';
 
                 // 배열 화면에 출력
-
                 displayArray(storedArray);
             }
 
@@ -45,7 +46,6 @@
                 array.forEach(function(item){
                     // 새로운 리스트 아이템 생성  
                     var listItem = document.createElement('li'); // li를 만들고 이를 참조하는 리스트 생성
-                    //listItem.textContent = inputValue // 해당 컨텐츠의 textContent는 inputValue값을 가진다.
                     
                     var checkbox = document.createElement('input');
                     checkbox.type = "checkbox";
@@ -62,7 +62,6 @@
                     
                 });
             }
-            
         </script>
     </head>
    
@@ -73,7 +72,6 @@
         <input type="text" id = "inputData"></input>
         <button type="button" onclick="showValue()">추가</button>
         <ol id="todoList">
-
         </ol>
     </body>
 </html>
