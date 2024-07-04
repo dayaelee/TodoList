@@ -9,10 +9,12 @@
 
 로컬스토리지를 이용하기 때문에 새로고침을 해도 목록이 변경되지 않습니다.
 
+
+<img width="885" alt="스크린샷 2024-07-04 오후 9 27 06" src="https://github.com/dayaelee/TodoList/assets/57593704/b8eed6d2-1016-4cf7-8987-66bd41fcb154">
 [새로고침 전]
-<img width="885" alt="스크린샷 2024-07-04 오후 9 27 06" src="https://github.com/dayaelee/TodoList/assets/57593704/b8eed6d2-1016-4cf7-8987-66bd41fcb154">
 
+
+
+<img width="885" alt="스크린샷 2024-07-04 오후 9 27 06" src="https://github.com/dayaelee/TodoList/assets/57593704/b8eed6d2-1016-4cf7-8987-66bd41fcb154">
 [새로고침 후]
-
-<img width="885" alt="스크린샷 2024-07-04 오후 9 27 06" src="https://github.com/dayaelee/TodoList/assets/57593704/b8eed6d2-1016-4cf7-8987-66bd41fcb154">
 
