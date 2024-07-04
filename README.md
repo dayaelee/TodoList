@@ -11,10 +11,10 @@
 
 
 <img width="885" alt="스크린샷 2024-07-04 오후 9 27 06" src="https://github.com/dayaelee/TodoList/assets/57593704/b8eed6d2-1016-4cf7-8987-66bd41fcb154">
-[새로고침 전]
+<div align="center">[새로고침 전]</div>
 
 
 
 <img width="885" alt="스크린샷 2024-07-04 오후 9 27 06" src="https://github.com/dayaelee/TodoList/assets/57593704/b8eed6d2-1016-4cf7-8987-66bd41fcb154">
-[새로고침 후]
+<div align="center">[새로고침 후]</div>
 
