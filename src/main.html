@@ -1,8 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang = "ko">
     <head>
         <meta charset="UTF-8">
         <title>오늘 할 일</title>
+        <style>
+            body{ background-color: lightpink;}
+            .container{
+                font-family: arial;
+                font-size: 16px;
+                width: 350px;
+                height: 200px;
+                outline: dashed 1px black;
+                padding-left: 30px;
+                padding-top: 30px;
+            }
+            .deleteButton{
+                width: 20px;
+                height: 20px;
+                background-color:brown;
+                text-align: center;
+            }
+        </style>
         <script>
             window.onload = function() {
                 // 페이지 로드시 localStorage에서 값을 가져와서 출력 
@@ -21,8 +39,28 @@
                 var inputValue = document.getElementById('inputData').value;
                 console.log('inputValue:', inputValue);
                 
+                var inputLength = inputValue.length;
+                
                 // 로컬스토리지에서 'todo' 키로 저장된 배열 가져오기 
                 var storedArray = JSON.parse(window.localStorage.getItem('todo')) || [];
+                var maxLength = 0;
+
+                for(let i = 0; i < storedArray.length; i++){
+                    if (maxLength < storedArray[i].length){
+                        maxLength=storedArray[i].length;
+                        console.log('maxLength: ', maxLength);
+                    }
+                }
+
+                var container = document.querySelector('.container');
+
+                if (inputLength >= maxLength){
+                    container.style.width = 80 + inputLength * 10 +'px';
+                }else{
+                    container.style.width = 80 + maxLength * 10 +'px';
+                }
+
+                container.style.height = 80 + (storedArray.length+1) * 20 + 'px';
                 console.log('storedArray:', storedArray);
                 
                 // 입력값을 배열에 추가함
@@ -43,24 +81,47 @@
                 var list = document.getElementById('todoList');
                 list.innerHTML = ''; // 기존 리스트 초기화 
 
+                var maxLength = 0;
+                
+                for(let i = 0; i < array.length; i++){
+                    if (maxLength < array[i].length){
+                        maxLength=array[i].length;
+                        console.log('maxLength: ', maxLength);
+                    }
+                }
+                // css에서 클래스 지정하는 함수 
+                var container = document.querySelector('.container');
+                container.style.width = 80 + maxLength * 10 +'px';
+                container.style.height = 80 + (array.length+1) * 20 + 'px';
+                
+                console.log('array:', array);
+
                 array.forEach(function(item){
                     // 새로운 리스트 아이템 생성  
                     var listItem = document.createElement('li'); // li를 만들고 이를 참조하는 리스트 생성
-                    
                     var checkbox = document.createElement('input');
                     checkbox.type = "checkbox";
 
                     var label = document.createElement('label');
                     label.textContent = item;
 
+                    var deleteButton = document.createElement('button');
+                    deleteButton.type = "button";
+                    deleteButton.classList.add('deleteButton');
+                    deleteButton.textContent = 'x';
+                    deleteButton.addEventListener('click', deleteValue);
                     
+
                     listItem.appendChild(label)
                     listItem.appendChild(checkbox)
-
+                    listItem.appendChild(deleteButton)
                     // 리스트에 추가 
                     list.appendChild(listItem);
-                    
                 });
+            }
+
+            function deleteValue(){
+                
             }
         </script>
     </head>
@@ -69,9 +130,12 @@
         <h1> 
             오늘 할 일 
         </h1>
-        <input type="text" id = "inputData"></input>
-        <button type="button" onclick="showValue()">추가</button>
-        <ol id="todoList">
-        </ol>
+        <div class = "container">
+            <input type="text" id = "inputData"></input>
+            <button type="button" onclick="showValue()">추가</button>
+            <ol id="todoList">
+            </ol>
+        </div>
+
     </body>
 </html>
