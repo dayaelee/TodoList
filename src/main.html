@@ -27,7 +27,8 @@
             
         </style>
         <script>
-            window.onload = function() {
+            // window.onload = function(){ ES6 적용전 코드 
+            window.onload = () =>{ // ES6 적용 코드 
                 // 페이지 로드시 localStorage에서 값을 가져와서 출력 
                 // 동일한 기능을 하는 걸 함수로 묶어서 개발하는게 좋다. 
                 // 나중에 개발하고나서 코드 리뷰를 하면면서 함수 묶으면 좋음
@@ -86,12 +87,12 @@
                 let container = document.querySelector('.container');
 
                 if (inputLength >= maxLength){
-                    container.style.width = 80 + inputLength * 10 +'px';
+                    container.style.width = `${80 + (inputLength * 10)}px`;
                 }else{
-                    container.style.width = 80 + maxLength * 10 +'px';
+                    container.style.width = `${80 + (maxLength * 10)}px`;
                 }
 
-                container.style.height = 80 + (storedArray.length+1) * 20 + 'px';
+                container.style.height = `80 + ${(storedArray.length+1) * 20}px`;
                 console.log('storedArray:', storedArray);
                 
                 // 입력값을 배열에 추가함
@@ -122,14 +123,12 @@
                 }
                 // css에서 클래스 지정하는 함수 
                 let container = document.querySelector('.container');
-                // 문자열 리터럴을 통해 https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Template_literals
-                // 템플릿 리터럴 
-
+                
                 // 삭제하는 기능
 
-                //`that ${person} is a ${age}`
-                container.style.width = 450 + maxLength * 10 +'px';
-                container.style.height = 80 + (array.length+1) * 20 + 'px';
+                // 템플릿 리터럴 적용
+                container.style.width = `${450 + (maxLength * 10)}px`;
+                container.style.height = `${80 + ((array.length+1) * 20)}px`;
                 
                 console.log('array:', array);
 
@@ -178,7 +177,7 @@
             오늘 할 일 
         </h1>
         <div class = "container">
-            <input type="text" id = "inputData"></input>
+            <input type="text" id = "inputData">
             <button type="button" onclick="showValue()">추가</button>
             <ol id="todoList">
             </ol>
