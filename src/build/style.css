@@ -1,0 +1,22 @@
+body{ 
+    background-color: lightpink;}
+            .container{
+                font-family: arial;
+                font-size: 16px;
+                width: 350px;
+                height: 200px;
+                outline: dashed 1px black;
+                padding-left: 30px;
+                padding-top: 30px;
+            }
+            .deleteButton{
+                width: 20px;
+                height: 20px;
+                background-color:brown;
+                text-align: center;
+            }
+            #inputData{
+                width: 400px;
+
+            }
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3N0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLDJCQUEyQixDQUFDO1lBQ3BCO2dCQUNJLGtCQUFrQjtnQkFDbEIsZUFBZTtnQkFDZixZQUFZO2dCQUNaLGFBQWE7Z0JBQ2IseUJBQXlCO2dCQUN6QixrQkFBa0I7Z0JBQ2xCLGlCQUFpQjtZQUNyQjtZQUNBO2dCQUNJLFdBQVc7Z0JBQ1gsWUFBWTtnQkFDWixzQkFBc0I7Z0JBQ3RCLGtCQUFrQjtZQUN0QjtZQUNBO2dCQUNJLFlBQVk7O1lBRWhCIiwiZmlsZSI6InN0eWxlLmNzcyIsInNvdXJjZXNDb250ZW50IjpbImJvZHl7IFxuICAgIGJhY2tncm91bmQtY29sb3I6IGxpZ2h0cGluazt9XG4gICAgICAgICAgICAuY29udGFpbmVye1xuICAgICAgICAgICAgICAgIGZvbnQtZmFtaWx5OiBhcmlhbDtcbiAgICAgICAgICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICAgICAgICAgICAgd2lkdGg6IDM1MHB4O1xuICAgICAgICAgICAgICAgIGhlaWdodDogMjAwcHg7XG4gICAgICAgICAgICAgICAgb3V0bGluZTogZGFzaGVkIDFweCBibGFjaztcbiAgICAgICAgICAgICAgICBwYWRkaW5nLWxlZnQ6IDMwcHg7XG4gICAgICAgICAgICAgICAgcGFkZGluZy10b3A6IDMwcHg7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICAuZGVsZXRlQnV0dG9ue1xuICAgICAgICAgICAgICAgIHdpZHRoOiAyMHB4O1xuICAgICAgICAgICAgICAgIGhlaWdodDogMjBweDtcbiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOmJyb3duO1xuICAgICAgICAgICAgICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgICNpbnB1dERhdGF7XG4gICAgICAgICAgICAgICAgd2lkdGg6IDQwMHB4O1xuXG4gICAgICAgICAgICB9Il19 */
